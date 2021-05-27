@@ -1,0 +1,19 @@
+{
+  "name": "gs310tp",
+  "version": "1.0.0",
+  "description": "Control Netgear GS310TP over HTTP API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node bin/gs310tp.js"
+  },
+  "author": "Taisuke Yamada <tai@rakkugaki.org>",
+  "license": "ISC",
+  "bin": {
+    "gs310tp": "bin/gs310tp.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "md5": "^2.3.0",
+    "node-rsa": "^1.1.1"
+  }
+}
