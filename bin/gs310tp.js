@@ -18,7 +18,7 @@ Example:
   \$ ${p} poe off 1
   \$ ${p} poe cycle 1
 NOTE:
-  - This is in early stage of development and consider it to be unstable
+  - Currently, only PoE operation is supported in CLI tool
   - Env \$NETGEAR_URL can be used instead of -u option
   - Env \$NETGEAR_PWD can be used instead of -p option
 `)
@@ -55,6 +55,10 @@ async function handle_poe(ua, cmds) {
 }
 
 async function main() {
+    if (yargs.argv.h || yargs.argv.help) {
+        help()
+    }
+
     let url = process.env.NETGEAR_URL || yargs.argv.u
     if (url === undefined) {
         help()
